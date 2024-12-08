@@ -69,12 +69,19 @@
 	}
 	// .project__image
 	&__image {
+		overflow: hidden;
 		margin-top: 20px;
 		@media (min-width: $md2) {
 			margin-top: 40px;
 		}
+		aspect-ratio: math.div(1830, 813);
 		& img {
+			height: 120%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
 			min-height: 240px;
+			transform-origin: center top;
 		}
 	}
 }

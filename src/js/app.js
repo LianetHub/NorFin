@@ -62,7 +62,6 @@ $(function () {
     $(window).on("resize", () => getNavigator());
 
 
-
     // click handler
     $(document).on('click', function (e) {
 
@@ -131,7 +130,6 @@ $(function () {
 
         }
 
-
     });
 
 
@@ -157,8 +155,6 @@ $(function () {
     });
 
 
-
-
     // sliders
 
     if ($('.gallery__items').length > 0) {
@@ -167,6 +163,7 @@ $(function () {
             slidesToShow: 1,
             prevArrow: '.gallery__prev',
             nextArrow: '.gallery__next',
+            fade: true,
         });
     }
 
@@ -189,6 +186,7 @@ $(function () {
     }
 
 
+
     // header height
 
     getHeaderHeight();
@@ -202,6 +200,7 @@ $(function () {
     window.addEventListener('resize', () => getHeaderHeight());
 
 
+
     // inputmask
     const phoneMask = "+7 (999) 999-99-99";
 
@@ -212,6 +211,132 @@ $(function () {
             clearIncomplete: true,
         });
     });
+
+
+
+
+    // animation
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // hero block parallax
+
+    if ($('.hero__image').length > 0) {
+
+        gsap.to('.hero__image img', {
+            y: "-15%",
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.hero',
+                start: `${-1 * getHeaderHeight()}px top`,
+                end: 'bottom top',
+                scrub: true
+            },
+        });
+    }
+
+
+    // video block
+
+    if ($('.idea').length > 0) {
+        gsap.to('.idea__video', {
+            maxWidth: "100vw",
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.idea__video',
+                start: 'top bottom',
+                end: `bottom top`,
+                scrub: true,
+            }
+        });
+    }
+
+
+    // cursor animation
+    if ($('.video-block').length > 0) {
+        $('.video-block').each(function () {
+            const $videoBlock = $(this);
+            const $customCursor = $videoBlock.find('.video-block__cursor');
+
+            $videoBlock.css('cursor', 'none');
+
+            $videoBlock.on('mousemove', function (e) {
+                const offset = $videoBlock.offset();
+                const x = e.pageX - offset.left;
+                const y = e.pageY - offset.top;
+
+                $customCursor.css({
+                    top: `${y}px`,
+                    left: `${x}px`,
+                    position: 'absolute',
+                    transform: 'translate(-50%, -50%)',
+                });
+            });
+
+            $videoBlock.on('mouseenter', function () {
+                $customCursor.show();
+            });
+
+            $videoBlock.on('mouseleave', function () {
+                $customCursor.hide();
+            });
+        });
+    }
+
+
+    // project block parallax
+    if ($('.project__image').length > 0) {
+
+        gsap.to('.project__image img', {
+            y: "-20%",
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.project',
+                start: `${-1 * getHeaderHeight()}px top`,
+                end: 'bottom top',
+                scrub: true,
+            },
+        });
+    }
+
+    if ($('.video__block').length > 0) {
+
+        gsap.to('.video__block img', {
+            y: "-20%",
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.video',
+                start: `${-1 * getHeaderHeight()}px top`,
+                end: 'bottom top',
+                scrub: true,
+            },
+        });
+    }
+
+
+    // parallax images
+    const $images = $('[data-parallax]');
+
+    if ($images.length > 0) {
+        $images.each(function () {
+            const $image = $(this);
+            const yOffset = $image.data('parallax') || "-15";
+
+            gsap.to($image[0], {
+                y: `${yOffset}vh`,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: $image[0],
+                    start: `top bottom`,
+                    end: `+200% bottom`,
+                    scrub: true,
+                },
+            });
+        });
+    }
+
+
+
 
 
 });
