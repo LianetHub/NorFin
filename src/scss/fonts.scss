@@ -22,14 +22,21 @@
 @font-face {
                             font-family: 'Manrope';
                             font-display: swap;
-                            src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
-                            font-weight: 600;
+                            src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+                            font-weight: 500;
                             font-style: normal;
                         }
 @font-face {
                             font-family: 'Manrope';
                             font-display: swap;
-                            src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+                            src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
+                            font-weight: 600;
+                            font-style: normal;
+                        }
+@font-face {
+                            font-family: 'TT-Autonomous-Mono-Trial';
+                            font-display: swap;
+                            src: url("../fonts/TT-Autonomous-Mono-Trial-Medium.woff2") format("woff2"), url("../fonts/TT-Autonomous-Mono-Trial-Medium.woff") format("woff");
                             font-weight: 500;
                             font-style: normal;
                         }
@@ -37,13 +44,6 @@
                             font-family: 'TT-Autonomous-Trial';
                             font-display: swap;
                             src: url("../fonts/TT-Autonomous-Trial-Medium.woff2") format("woff2"), url("../fonts/TT-Autonomous-Trial-Medium.woff") format("woff");
-                            font-weight: 500;
-                            font-style: normal;
-                        }
-@font-face {
-                            font-family: 'TT-Autonomous-Mono-Trial';
-                            font-display: swap;
-                            src: url("../fonts/TT-Autonomous-Mono-Trial-Medium.woff2") format("woff2"), url("../fonts/TT-Autonomous-Mono-Trial-Medium.woff") format("woff");
                             font-weight: 500;
                             font-style: normal;
                         }
