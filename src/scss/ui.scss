@@ -1,0 +1,248 @@
+@import "modules/config";
+
+.font-weight-semibold {
+	font-weight: 600;
+}
+
+.rounded {
+	border-radius: 20px !important;
+	@media (min-width: $md2) {
+		border-radius: 30px !important;
+	}
+}
+
+.color-blue {
+	color: $blue;
+}
+
+.title {
+	font-family: $font-trial;
+	font-weight: 500;
+	line-height: 95%;
+	font-size: 28px;
+	@media (min-width: $md5) {
+		font-size: 36px;
+	}
+	@media (min-width: $md4) {
+		font-size: 42px;
+	}
+	@media (min-width: $md3) {
+		font-size: 48px;
+	}
+	@media (min-width: $md2) {
+		font-size: 54px;
+	}
+	@media (min-width: $md1) {
+		font-size: 64px;
+	}
+}
+
+.subtitle {
+	color: #8f9fc7;
+	font-weight: 600;
+	line-height: 95%;
+	font-size: 18px;
+	@media (min-width: $md4) {
+		font-size: 24px;
+	}
+	@media (min-width: $md3) {
+		font-size: 28px;
+	}
+	@media (min-width: $md2) {
+		font-size: 32px;
+	}
+	@media (min-width: $md1) {
+		font-size: 34px;
+	}
+	@media (min-width: $md0) {
+		font-size: 36px;
+	}
+}
+
+.color-green {
+	color: $blue;
+}
+
+.color-secondary {
+	color: $secondary;
+}
+
+.color-white {
+	color: $grey;
+}
+
+.color-grey {
+	color: #aeaeae;
+}
+
+.play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $blue;
+	transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+	padding-left: 4px;
+	width: 60px;
+	height: 60px;
+	@media (min-width: $md4) {
+		width: 80px;
+		height: 80px;
+	}
+	@media (min-width: $md0) {
+		width: 100px;
+		height: 100px;
+	}
+	&::before {
+		@extend %ic, .icon-play;
+		font-size: 20px;
+		@media (min-width: $md0) {
+			font-size: 30px;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background: $blue;
+			color: #fff;
+		}
+	}
+}
+
+.slick-arrow {
+	position: static;
+	vertical-align: middle;
+	font-size: 0;
+	background: #fff;
+	color: $blue;
+	border: 1px solid #d3d3d3;
+	color: #565656;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.3s ease 0s, border-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+	z-index: 2;
+	width: em(50, 18);
+	height: em(50, 18);
+	cursor: pointer;
+	font-size: 16px;
+	@media (min-width: $md4) {
+		font-size: 18px;
+	}
+	&::before {
+		@extend %ic, .icon-chevron;
+
+		display: block;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background: $blue;
+			border-color: $text;
+			color: #fff;
+		}
+	}
+	// position: absolute;
+	// top: 50%;
+	// transform: translateY(-50%);
+	&.slick-disabled {
+		opacity: 0.6;
+		pointer-events: none;
+		// visibility: hidden;
+	}
+}
+
+.slick-next {
+	right: 15px;
+	&::before {
+		// transform: rotate(90deg);
+	}
+}
+
+.slick-prev {
+	left: 15px;
+	&::before {
+		transform: rotate(-180deg);
+	}
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+
+//============ МОДУЛИ ====================
+@import "modules/popup";
+// @import "modules/navigation";
+// @import "modules/select";
+// @import "modules/stepper";
+//============ МОДУЛИ ====================
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $mainColor;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+// $scrollbarColor: $orange;
+// $scrollbarHover: darken(
+// 	$color: $orange,
+// 	$amount: 10,
+// );
+
+// ::-webkit-scrollbar {
+// 	width: 8px;
+// }
+// ::-webkit-scrollbar-track {
+// 	background: #fff;
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background: $scrollbarColor;
+// 	border-radius: 8px;
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			background: $scrollbarHover;
+// 		}
+// 	}
+// }
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============

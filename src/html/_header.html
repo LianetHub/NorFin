@@ -1,0 +1,41 @@
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__body d-flex justify-content-between align-items-center">
+            <a href="/" class="header__logo">
+                <img src="@img/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__menu menu">
+                <div class="menu__content d-flex flex-lg-row flex-column">
+                    <nav aria-label="Меню в шапке" class="menu__body d-flex align-items-lg-center flex-lg-row flex-column">
+                        <a href="/" class="menu__logo d-lg-none">
+                            <img src="@img/logo.svg" alt="Логотип">
+                        </a>
+                        <ul class="menu__list d-flex align-items-lg- center flex-lg-row flex-column">
+                            <li class="menu__item parent">
+                                <a href="/house-for-slippers.html" class="menu__link@@if(active===1){ active}">Дома под тапочки</a>
+                                <div class="submenu">
+                                    <ul class="submenu__list d-flex flex-lg-wrap flex-lg-row flex-column">
+                                        <li class="submenu__item">
+                                            <a href="/project.html" class="submenu__link@@if(active===2){ active}">NorFin 100</a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="/project.html" class="submenu__link@@if(active===3){ active}">NorFin 120</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu__item"><a href="/history.html" class="menu__link@@if(active===4){ active}">История компании</a></li>
+                        </ul>
+                        <a href="tel:88002222069" class="menu__phone">8(800) 2222-069</a>
+                    </nav>
+                    <a href="" class="menu__btn btn btn-primary btn-sm">Конфигуратор</a>
+                </div>
+            </div>
+            <button type="button" class="header__menu-btn icon-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>

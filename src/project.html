@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'NorFin | Главная'
+    })
+
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            'active': 0
+            })
+            <main class="page">
+                <section class="project">
+                    <div class="container-xxl">
+                        <div class="project__header d-flex align-items-lg-end justify-content-between flex-lg-row flex-column">
+                            <div class="project__header-main">
+                                <h1 class="project__title title">NorFin 120</h1>
+                                <p class="project__desc">Три комнаты, две ванные. 102 м²</p>
+                            </div>
+                            <div class="project__nav d-flex flex-wrap">
+                                <a href="#plan" class="project__nav-item">Планировка</a>
+                                <a href="#gallery" class="project__nav-item">Галерея</a>
+                                <a href="#price" class="project__nav-item">Что входит в стоимость</a>
+                            </div>
+                        </div>
+                        <div class="project__image">
+                            <img src="@img/banner.jpg" class="cover-image rounded" alt="Фото проекта">
+                        </div>
+                    </div>
+                </section>
+                <div class="desc">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="desc__text pr-lg-5">
+                                    Прекрасное решение для тех,
+                                    кто хочет сменить тесную
+                                    квартиру с&nbsp;невыразительными
+                                    окнами и давящими
+                                    потолками&nbsp;на просторный дом
+                                    для яркой и&nbsp;счастливой жизни!
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="desc__image">
+                                    <img src="@img/founder.jpg" class="rounded" alt="Фото основателя проекта">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan" id="plan">
+                    <div class="container">
+                        <a href="@img/plan.png" data-fancybox class="plan__image">
+                            <img src="@img/plan.png" alt="Фото планировки">
+                        </a>
+                        <div class="plan__info d-flex flex-wrap">
+                            <div class="plan__info-column">
+                                <div class="plan__info-caption">Общая площадь</div>
+                                <div class="plan__info-value color-grey">115.6 м²</div>
+                            </div>
+                            <div class="plan__info-column">
+                                <div class="plan__info-caption">Жилые помещения</div>
+                                <div class="plan__info-value color-grey">102 м²</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gallery" class="works">
+                    <div class="container">
+                        <div class="works__slider">
+                            <a href="@img/works/01.png" data-fancybox="works" class="works__slide">
+                                <img src="@img/works/01.png" alt="Фото проекта">
+                            </a>
+                            <a href="@img/works/02.png" data-fancybox="works" class="works__slide">
+                                <img src="@img/works/02.png" alt="Фото проекта">
+                            </a>
+                            <a href="@img/works/03.png" data-fancybox="works" class="works__slide">
+                                <img src="@img/works/03.png" alt="Фото проекта">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @@include('./html/_slider.html', {
+                'title': 'Комфорт <br> премиум уровня',
+                'initial': 2
+                })
+                <div class="desc">
+                    <div class="container-xxl">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="desc__text">
+                                    На создание проекта нас воодушевила лаконичная скандинавская архитектура и эргономика помещений.
+                                </p>
+                                <p class="desc__text pr-lg-5">
+                                    Соединив необходимый набор&nbsp;помещений в сочетании&nbsp;с панорамным остеклением проект удался.
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="desc__image">
+                                    <img src="@img/about/01.jpg" class="rounded" alt="Пример проекта">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desc__gallery">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="desc__image mr-lg-n2">
+                                        <img src="@img/about/02.jpg" class="rounded" alt="Пример проекта">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 offset-lg-1">
+                                    <div class="desc__image offset-top">
+                                        <img src="@img/about/03.jpg" class="rounded" alt="Пример проекта">
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="desc__image mr-lg-n4">
+                                        <img src="@img/about/04.jpg" class="rounded" alt="Пример проекта">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="desc__image">
+                                        <img src="@img/about/05.jpg" class="rounded" alt="Пример проекта">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="price" class="price">
+                    <div class="container">
+                        <h2 class="price__title title">
+                            Что входит в&nbsp;стомость
+                        </h2>
+                        <div class="price__body">
+                            <div class="price__block">
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="price__column">
+                                            <div class="price__caption">Стоимость</div>
+                                            <div class="price__value">
+                                                от 6 140 000 ₽
+                                                <small>(базовый блок и установка)</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="price__column">
+                                            <div class="price__caption">Площадь</div>
+                                            <div class="price__value">
+                                                115.6 м²
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="price__column">
+                                            <div class="price__caption">Размеры</div>
+                                            <div class="price__value">
+                                                15.13 x 9.26 м
+                                                <small>высота 4.9 м</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="price__column">
+                                            <div class="price__caption">Жилое пространство</div>
+                                            <div class="price__value">
+                                                102 м²
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price__block">
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="price__column">
+                                            <div class="price__caption">Высота потолка</div>
+                                            <div class="price__value">
+                                                3 м
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 order-xl-0 order-1">
+                                        <div class="price__column">
+                                            <div class="price__caption">Фундамент</div>
+                                            <div class="price__value">
+                                                Монолитная фундаментная плита 250 мм. Бетон B20 W4
+                                            </div>
+                                        </div>
+                                        <div class="price__column">
+                                            <div class="price__caption">Окна и входные двери </div>
+                                            <div class="price__value">
+                                                Rehau ГОСТ Grazio 70мм
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="price__column">
+                                            <div class="price__caption">Стены</div>
+                                            <div class="price__value">
+                                                Керамический <br> блок Porotherm
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 order-xl-0 order-1">
+                                        <div class="price__column">
+                                            <div class="price__caption">Кровля</div>
+                                            <div class="price__value">
+                                                Стропильная система - деревянные фермы на МЗП. Покрытие - Металлочерепица GrandLine
+                                            </div>
+                                        </div>
+                                        <div class="price__column">
+                                            <div class="price__banner">
+                                                <div class="price__caption">Дополнить комплектацию дома</div>
+                                                <a href="" class="price__btn btn btn-primary">Конфигуратор</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_popup.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

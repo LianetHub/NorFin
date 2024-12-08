@@ -1,0 +1,275 @@
+.fancybox-bg {
+	background: rgba($color: #1d1d1d, $alpha: 0.4);
+}
+
+.fancybox__content {
+	color: inherit;
+	background: none;
+	padding: 0;
+}
+
+.fancybox__content :focus:not(.carousel__button.is-close) {
+	outline: none;
+}
+
+.popup {
+	display: none;
+	width: 100%;
+	background: #fff;
+	max-width: 900px;
+	overflow: visible;
+	border-radius: 20px;
+	padding: 30px 20px;
+	cursor: default !important;
+	@media (min-width: $md5) {
+		padding: 50px 60px;
+	}
+
+	.fancybox-button {
+		&[data-fancybox-close] {
+			top: 15px;
+			right: 15px;
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			@media (min-width: $md5) {
+				top: 30px;
+				right: 30px;
+				width: 60px;
+				height: 60px;
+				padding: 10px;
+			}
+			color: #141743;
+			background: transparent;
+			border-radius: 10px;
+			transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					background: $text;
+					color: #fff;
+					border-color: $text;
+				}
+			}
+			& svg {
+				display: none;
+			}
+		}
+		&::before {
+			@extend %ic, .icon-close;
+			font-size: 24px;
+			@media (min-width: $md5) {
+				font-size: 36px;
+			}
+		}
+	}
+
+	// .popup__header
+	&__header {
+	}
+	// .popup__back
+	&__back {
+		color: #263777;
+		font-weight: 500;
+		line-height: 100%;
+		font-size: 18px;
+		@media (min-width: $md5) {
+			font-size: 24px;
+		}
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .popup__body
+	&__body {
+	}
+	// .popup__main
+	&__main {
+	}
+	// .popup__title
+	&__title {
+		margin-top: 50px;
+	}
+	// .popup__subtitle
+	&__subtitle {
+		margin-top: 24px;
+		font-weight: 500;
+		line-height: 100%;
+		color: #263777;
+		max-width: 552px;
+		@media (min-width: $md5) {
+			font-size: 18px;
+		}
+		@media (min-width: $md4) {
+			font-size: 25.3px;
+		}
+		& a {
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// .popup__list
+	&__list {
+		margin-top: 25px;
+	}
+	// .popup__list-item
+	&__list-item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+			@media (min-width: $md5) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	// .popup__btn
+	&__btn {
+		border: 1px solid #d3d3d3;
+		background: #f5f5f5;
+		&::before {
+			flex-shrink: 0;
+			margin-right: 15px;
+			font-size: 18px;
+			width: 24px;
+			height: 24px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@media (min-width: $md4) {
+				font-size: 21px;
+			}
+		}
+		transition: background-color 0.3s ease;
+		border-radius: 12px;
+		padding: 18px;
+		@media (min-width: $md4) {
+			padding: 25px;
+			border-radius: 20px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: darken($color: #f5f5f5, $amount: 10);
+			}
+		}
+	}
+	// .popup__btn-column
+	&__btn-column {
+	}
+	// .popup__btn-name
+	&__btn-name {
+		color: #141743;
+		font-weight: 600;
+		line-height: 100%;
+		font-size: 18px;
+		@media (min-width: $md5) {
+			font-size: 20px;
+		}
+		@media (min-width: $md4) {
+			font-size: 24px;
+		}
+	}
+	// .popup__btn-text
+	&__btn-text {
+		margin-top: 10px;
+		color: #263777;
+		font-weight: 500;
+		line-height: 100%;
+		max-width: 590px;
+		font-size: 14px;
+		@media (min-width: $md5) {
+			font-size: 16px;
+		}
+		@media (min-width: $md4) {
+			font-size: 20px;
+		}
+		& a {
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// .popup__footer
+	&__footer {
+		color: #263777;
+		font-weight: 500;
+		line-height: 100%;
+		font-size: 18px;
+		margin-top: 20px;
+		@media (min-width: $md5) {
+			margin-top: 30px;
+			font-size: 20px;
+		}
+		@media (min-width: $md4) {
+			font-size: 24px;
+		}
+	}
+	// .popup__footer-link
+	&__footer-link {
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	// .popup__forms
+	&__forms {
+		.popup__form {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+	}
+	// .popup__form
+	&__form {
+	}
+	// .popup__form-content
+	&__form-content {
+		margin-top: 25px;
+		border-top: 1px solid #929bbb;
+		padding-top: 25px;
+	}
+	// .popup__form-row
+	&__form-row {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			@media (min-width: $md4) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	// .popup__form-btn
+	&__form-btn {
+		margin-top: 15px;
+		@media (min-width: $md4) {
+			margin-top: 25px;
+		}
+	}
+	// .popup__form-privacy
+	&__form-privacy {
+		margin-top: 10px;
+		color: #8f9fc7;
+		font-weight: 500;
+		line-height: 95%;
+		font-size: 12px;
+		@media (min-width: $md4) {
+			font-size: 16.7px;
+		}
+		& a {
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #8f9fc7;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

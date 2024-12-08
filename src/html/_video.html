@@ -1,0 +1,20 @@
+<section class="video">
+    <div class="container-xxl">
+        <h1 class="video__title title">
+            @@title
+        </h1>
+        <a href="" class="video__block rounded">
+            @@if(type===1){
+            <img src="@img/banner.jpg" class="rounded" alt="Постер видео">
+            }
+            @@if(type===2){
+            <img src="@img/project.jpg" class="rounded" alt="Постер видео">
+            }
+            <span class="video__block-info d-flex flex-column text-center align-items-center">
+                <span class="video__block-play icon-play"></span>
+                <span class="video__block-name">@@desc</span>
+                <span class="video__block-time">10:56</span>
+            </span>
+        </a>
+    </div>
+</section>

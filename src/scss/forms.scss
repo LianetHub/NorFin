@@ -1,0 +1,173 @@
+.form-control {
+	background: transparent;
+	border-radius: em(20, 20);
+	border: 1px solid #d3d3d3;
+	background: #f5f5f5;
+	line-height: 100%;
+	font-weight: 500;
+	width: 100%;
+	text-overflow: ellipsis;
+	padding: em(41, 20) em(30, 20);
+	font-family: Manrope;
+	color: $text !important;
+	@media (min-width: $md4) {
+		font-size: 18px;
+	}
+	@media (min-width: $md3) {
+		font-size: 20px;
+	}
+
+	&::placeholder {
+		opacity: 1;
+		color: #8f9fc7;
+	}
+	&:focus {
+		outline: none;
+		color: inherit;
+		border-color: inherit;
+		background: transparent;
+		box-shadow: none;
+		border-color: $blue;
+	}
+
+	&._error {
+		background: #ffdbdb;
+		border-color: #ffdbdb;
+	}
+}
+textarea.form-control {
+	height: 225px !important;
+	padding-block: em(32, 20);
+	resize: none;
+}
+
+.label {
+	color: #263777;
+	font-weight: 500;
+	line-height: 100%;
+	display: block;
+	font-size: 18px;
+	margin-bottom: 15px;
+	@media (min-width: $md4) {
+		margin-bottom: 25px;
+		font-size: 24px;
+	}
+}
+
+.file {
+	display: block;
+	// .file__input
+	&__input {
+	}
+	// .file__btn
+	&__btn {
+		width: 100%;
+		display: flex;
+		&.btn {
+			padding-left: 60px;
+			justify-content: center;
+			text-align: center;
+			font-size: 20px;
+			font-family: $font-mono-trial;
+			&::before {
+				order: -1;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				bottom: 5px;
+				margin: 0;
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+// <BUTTONS (a.btn+tab)>==============================
+
+.btn {
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	overflow: hidden;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-family: $fontfamily;
+	border-radius: em(15, 24);
+	padding: em(14, 24) em(64, 24);
+	font-weight: 600;
+	line-height: normal;
+	@media (min-width: $md4) {
+		font-size: 18px;
+	}
+	@media (min-width: $md2) {
+		font-size: 24px;
+	}
+	&.btn-primary {
+		background: #263777;
+		border-color: #263777;
+		color: #f0efe3;
+
+		&:hover {
+			border-color: darken($color: #263777, $amount: 10);
+			background: darken($color: #263777, $amount: 10);
+		}
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba($color: #263777, $alpha: 0.5);
+		}
+		&:not(:disabled):not(.disabled):active {
+			background-color: darken($color: #263777, $amount: 15);
+			border-color: darken($color: #263777, $amount: 15);
+		}
+	}
+	&.btn-secondary {
+		background: $blue;
+		border: 0;
+		color: #fff;
+		&::before {
+			background: #fff;
+			color: $text;
+		}
+		&:hover {
+			background: darken($color: $blue, $amount: 10);
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba($color: $blue, $alpha: 0.5);
+		}
+		&:not(:disabled):not(.disabled):active {
+			background-color: darken($color: $blue, $amount: 15);
+			border-color: darken($color: $blue, $amount: 15);
+		}
+	}
+	&.btn-white {
+		background: #fff;
+		border-color: #fff;
+		color: #141743;
+		&:hover {
+			background: darken($color: #fff, $amount: 10);
+		}
+		&:focus {
+			box-shadow: 0 0 0 0.2rem rgba($color: #fff, $alpha: 0.5);
+		}
+		&:not(:disabled):not(.disabled):active {
+			background-color: darken($color: #fff, $amount: 15);
+			border-color: darken($color: #fff, $amount: 15);
+		}
+	}
+	&.btn-sm {
+		font-size: 16px;
+		@media (min-width: $md2) {
+			font-size: 18px;
+			font-weight: 500;
+			padding: 17px 24px;
+		}
+	}
+	&.btn-md {
+		@media (min-width: $md2) {
+			font-size: 20px;
+			font-weight: 500;
+			padding: 28px 24px;
+		}
+	}
+}
