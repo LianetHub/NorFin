@@ -74,19 +74,26 @@
 		@media (min-width: $md2) {
 			margin-top: 40px;
 		}
-		aspect-ratio: math.div(1830, 813);
+		@media (min-width: $md5) {
+			aspect-ratio: math.div(1830, 813);
+		}
 		& img {
-			height: 120%;
 			width: 100%;
 			object-fit: cover;
 			object-position: center;
-			min-height: 240px;
+			@media (max-width: $md5) {
+				transform: none !important;
+			}
+			@media (min-width: $md5) {
+				height: 120%;
+			}
 			transform-origin: center top;
 		}
 	}
 }
 
 .desc {
+	overflow: hidden;
 	padding: 35px 0 70px;
 	@media (min-width: $md4) {
 		padding: 50px 0px;
@@ -96,9 +103,12 @@
 	}
 	// .desc__text
 	&__text {
+		position: relative;
+		z-index: 2;
 		font-weight: 500;
 		line-height: 95%;
 		font-size: 18px;
+		background: rgba($color: #f9f9f9, $alpha: 0.5);
 		@media (min-width: $md4) {
 			font-size: 20px;
 		}
@@ -151,6 +161,9 @@
 			@media (min-width: $md2) {
 				margin-top: 190px;
 			}
+		}
+		.video-image {
+			aspect-ratio: 1.38;
 		}
 	}
 }
@@ -206,6 +219,7 @@
 	@media (min-width: $md3) {
 		padding: 90px 0 130px;
 	}
+	background: #fff;
 	// .works__slider
 	&__slider {
 		@media (min-width: $md4) {
@@ -223,6 +237,8 @@
 	&__slide {
 		height: auto;
 		padding: 0 12.5px;
+		cursor: grab;
+
 		& img {
 			transition: transform 0.3s ease;
 		}

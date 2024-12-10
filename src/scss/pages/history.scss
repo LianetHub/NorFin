@@ -38,7 +38,6 @@
 		}
 		aspect-ratio: math.div(1830, 813);
 		& > img {
-			min-height: rem(320);
 			height: 120%;
 			object-fit: cover;
 		}
@@ -221,6 +220,8 @@
 	}
 	// .article__text
 	&__text {
+		position: relative;
+		z-index: 2;
 		font-size: 18px;
 		@media (min-width: $md4) {
 			font-size: 20px;
@@ -269,6 +270,8 @@
 	}
 	// .article__time
 	&__time {
+		position: relative;
+		z-index: 2;
 		color: #263777;
 		font-family: $font-trial;
 		font-weight: 500;

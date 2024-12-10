@@ -11,7 +11,7 @@
 	// .hero__title
 	&__title {
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 		@media (min-width: $md1) {
 			padding: 0 0 0 40px;
 		}
@@ -24,7 +24,7 @@
 		bottom: 0;
 		right: 0;
 		width: 100%;
-		z-index: 2;
+		z-index: 1;
 		pointer-events: none;
 		& img {
 			width: 100%;
@@ -107,10 +107,8 @@
 	// .projects__card-image
 	&__card-image {
 		height: 0;
-		padding-bottom: 75%;
-		@media (min-width: $md2) {
-			padding-bottom: 53.5%;
-		}
+		padding-bottom: 56.25%;
+
 		position: relative;
 		overflow: hidden;
 		& img {
@@ -267,8 +265,12 @@
 		@media (any-hover: hover) {
 			&:hover {
 				.media__card-image {
+					& img {
+						transform: scale(1.1);
+					}
 					&::before {
 						opacity: 1;
+						z-index: 2;
 					}
 				}
 			}
